@@ -765,6 +765,9 @@ void MyMesh::begin(FILESYSTEM *fs) {
     // Set board model
     bridge.setBoardModel(_cli.getBoard()->getManufacturerName());
     
+    // Set build date
+    bridge.setBuildDate(getBuildDate());
+    
     bridge.begin();
   }
 #endif
